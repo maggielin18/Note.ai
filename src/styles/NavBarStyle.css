@@ -1,3 +1,11 @@
 .navBar{
-    height: 80px;
+    list-style-type: none; /* Remove list bullets */
+    display: inline-block; /* Display items horizontally */
+    margin-right: 10px; /* Add spacing between items */
+    /* padding: 10px; */
+}
+
+.navBarIcons{
+    width: 25px;
+    height: 25px;
 }

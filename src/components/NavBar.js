@@ -11,7 +11,7 @@ class NavBar extends Component{
                     return (
                         <li
                             key = {key}
-                            className = 'navItem'
+                            className = 'navBar'
                             onClick = {() => {
                                 window.location.pathname = key.link;
                             }}
