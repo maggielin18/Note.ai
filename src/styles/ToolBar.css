@@ -1,0 +1,9 @@
+.toolBar{
+    position: absolute;
+    padding: 20px;
+}
+
+.toolBarIcons{
+    width: 25px;
+    height: 25px;
+}
