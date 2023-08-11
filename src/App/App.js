@@ -6,7 +6,7 @@ import ToolBar from '../components/ToolBar.js';
 function App() {
   return (
     <div className="App">
-        <ToolBar/>
+        {/* <ToolBar/> */}
         <NavBar/>
     </div>
   );
