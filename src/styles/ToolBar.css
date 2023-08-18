@@ -1,6 +1,12 @@
 .toolBar{
     position: absolute;
-    padding: 20px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column; 
+    background-color: #3498db; 
+    width: 100px;
+    height: 200px;
+    right: 100px;
 }
 
 .toolBarIcons{
