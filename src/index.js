@@ -8,15 +8,18 @@ import App from './App/App.js';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
-    <React.StrictMode>
-        <Router>
-            <Routes>
-                <Route path='/' element={<App />} />
-                {/* <Route path='/' element={<SplashScreen />} /> */}
-            </Routes>
-        </Router>
-    </React.StrictMode>
+    <React.StrictMode>
+        <Router>
+            <Routes>
+                <Route path='/' element={<App />} />
+                {/* <Route path='/' element={<SplashScreen />} /> */}
+            </Routes>
+        </Router>
+    </React.StrictMode>
 );
+
+
+
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
