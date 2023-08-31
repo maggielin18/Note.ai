@@ -1,18 +1,23 @@
-
 const express = require('express');
-const MongoClient = require('mongodb').MongoClient;
-const url = 'mongodb://localhost:27017/notebank';
+const mongoose = require('mongoose');
+const Note = require('./models/note');
 const app = express();
-const PORT = process.env.PORT || 3001;
+const PORT = 3005;
+const url = 'mongodb://localhost:27017/notebank';
 
-MongoClient.connect(url, { useUnifiedTopology: true }, (err, client) => {
-  if (err) throw err;
-  console.log('Connected to MongoDB');
-  const db = client.db('notebank'); // Change 'mydatabase' to your database name
+mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true })
+  .then(() => {
+    console.log('Connected to MongoDB');
 
-  // Define routes here, using the `db` object to interact with the database
+    app.get('/', (req, res) => {
+      console.log('Root route hit');
+      res.send('Server with MongoDB is up and running!');
+    });
 
-  app.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`);
+    app.listen(PORT, () => {
+      console.log(`Server running on port ${PORT}`);
+    });
+  })
+  .catch(err => {
+    console.error('Connection error:', err);
   });
-});
