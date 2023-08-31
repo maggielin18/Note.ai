@@ -1,0 +1,15 @@
+.note{
+  /* left: 100px;
+  padding: 10px; */
+  background-color: white;
+}
+
+.note textarea {
+  width: 80vw; /* Set the width to 70% of viewport width */
+  height: calc(100vh - 80px); /* Set the height to 60% of viewport height */
+  white-space: pre-wrap;
+  background: transparent;
+  border: none;
+  resize: none;
+  font-size: 18px;
+}

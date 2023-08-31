@@ -2,7 +2,7 @@ import React from 'react';
 import { Component } from 'react';
 
 import { ToolBarElement } from './ToolBarElement';
-import '../styles/ToolBar.css';
+import '../styles/ToolBarStyle.css';
 
 class ToolBar extends Component{
   render(){

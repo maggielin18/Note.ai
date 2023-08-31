@@ -1,11 +1,11 @@
 import React from "react";
 
-import '../styles/Note.css'
+import '../styles/NoteStyle.css'
 
 function Note() {
   return (
     <div className="note">
-      <textarea
+      <textarea 
       placeholder="New Note">
       </textarea>
     </div>
