@@ -1,0 +1,15 @@
+.note{
+  background-color: white;
+  /* position: absolute; */
+  padding: 10px;
+  left: 100px;
+}
+
+.note textarea {
+  white-space: pre-wrap;
+  background: transparent;
+  border: none;
+  /* color: #ffffff; */
+  /* resize: none; */
+  font-size: 18px;
+}

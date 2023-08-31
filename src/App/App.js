@@ -1,13 +1,16 @@
-import './App.css';
+// import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
+import './App.css';
 import NavBar from '../components/NavBar.js';
 import ToolBar from '../components/ToolBar.js';
+import Note from '../components/Note';
 
 function App() {
   return (
     <div className="App">
-        <ToolBar/>
         <NavBar/>
+        <ToolBar/>
+        <Note/>
     </div>
   );
 }
