@@ -3,7 +3,7 @@ const noteSchema = require('./noteSchema');
 
 const folderSchema = new mongoose.Schema({
   title: String,
-  content: [noteSchema],
+  content: String,
   createdAt: { type: Date, default: Date.now },
   updatedAt: Date,
 });

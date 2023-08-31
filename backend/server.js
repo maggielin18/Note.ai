@@ -15,7 +15,7 @@ mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true })
       res.send('Server with MongoDB is up and running!');
     });
 
-    app.post('/api/notes', async (req, res) => {
+    app.post('/', async (req, res) => {
       try {
         const { title, content } = req.body;
         const note = new Note({ title, content });
