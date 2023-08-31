@@ -1,6 +1,6 @@
 const express = require('express');
 const mongoose = require('mongoose');
-const Note = require('./models/note');
+const Note = require('./models/noteSchema');
 const app = express();
 const PORT = 3005;
 const url = 'mongodb://localhost:27017/notebank';
