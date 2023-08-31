@@ -11,7 +11,7 @@ class NavBar extends Component{
       <div className='navBar'>
         {NavBarElement.map(element => (
           <div key={element.id}>
-            <Link className="link" to={element.link}>            
+            <Link className="link" to={element.link} onClick={element.onClick}>        
               <div className='navBarItems'>
                 {element.icon} 
                 {element.title}
