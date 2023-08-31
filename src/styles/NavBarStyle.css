@@ -1,16 +1,28 @@
 .navBar{
-    list-style-type: none; 
-    padding: 10px;
-    display: flex;
-    flex-direction: column; 
-    /* align-items: flex-start;  */
-    background-color: #3498db; 
-    width: 100px;
-    height: 100px;
-
+  position: absolute;
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column; 
+  background-color: #c2c2c2; 
+  width: 100px;
+  height: 700px;
+  left: 0px;
+  top: 10px;
+  border-top-right-radius: 0.2cm;
+  border-bottom-right-radius: 0.2cm;
 }
 
-.navBarIcons{
-    width: 25px;
-    height: 25px;
+.navBarItems{
+  padding-left: 5px;
+  margin-bottom: 30px;
+  margin-right: 10px;
+  display: flex;
+  flex-direction: row;
+  width: 25px;
+  height: 25px;
+}
+
+.link{
+  text-decoration: none;
+  color: inherit;
 }
