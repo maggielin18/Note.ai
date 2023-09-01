@@ -8,7 +8,8 @@
   flex-direction: column;
   align-items: center; /* Center vertically */
   justify-content: center; /* Center horizontally */
-  background-color: white;
+  background-color:#fdfdfd;
+  font-size: 14px;
 }
 
 .titleInput {
@@ -18,7 +19,6 @@
   border: none;
   outline: none;
   resize: none;
-  font-size: 18px;
 }
 .contentInput {
   width: 95%; /* Set the width to 70% of viewport width */
@@ -28,5 +28,4 @@
   border: none;
   outline: none;
   resize: none;
-  font-size: 18px;
 }

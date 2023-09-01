@@ -30,7 +30,7 @@ class NavBar extends Component{
             </Link>
           </div>
         ))}
-        <button onClick={() => this.handleCreateNote("New Note Title", "New Note Content")}>Create Note</button>
+        {/* <button onClick={() => this.handleCreateNote("New Note Title", "New Note Content")}>Create Note</button> */}
       </div>
     )
     // return(

@@ -7,7 +7,7 @@ import Note from '../components/Note';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App" >
         <NavBar/>
         <ToolBar/>
         <Note/>
