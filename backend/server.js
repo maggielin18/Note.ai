@@ -15,6 +15,17 @@ mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true })
       res.send('Server with MongoDB is up and running!');
     });
 
+    app.post('/', async (req, res) => {
+      try {
+        const { title, content } = req.body;
+        const note = new Note({ title, content });
+        await note.save();
+        res.status(201).json(note);
+      } catch (error) {
+        res.status(400).json({ error: 'Failed to create note' });
+      }
+    });
+
     app.listen(PORT, () => {
       console.log(`Server running on port ${PORT}`);
     });
