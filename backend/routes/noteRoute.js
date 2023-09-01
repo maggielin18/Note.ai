@@ -60,6 +60,7 @@ router.delete('/:id', async (req, res) => {
   } catch (error) {
     res.status(400).json({ error: 'Failed to delete note' });
   }
+  
 });
 
 module.exports = router;

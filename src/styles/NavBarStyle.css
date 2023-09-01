@@ -4,12 +4,14 @@
   transform: translateY(-50%); 
   left: 0px;
   width: 150px; /* Make this adjustable/dynamic using cursor */
-  height: calc(100vh - 50px);
+  /* height: calc(100vh - 50px); */
+  height: 100vh;
   display: flex;
   flex-direction: column;
-  background-color: #c2c2c2;
-  border-top-right-radius: 0.2cm;
-  border-bottom-right-radius: 0.2cm;
+  background-color: #eeeeee;
+  /* border-top-right-radius: 0.2cm;
+  border-bottom-right-radius: 0.2cm; */
+  font-size: 14px;
 }
 
 .navBarItems {

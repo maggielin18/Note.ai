@@ -1,6 +1,26 @@
 .App {
   text-align: center;
+  font-family: 'Poppins', sans-serif;
 }
+
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 900;
+  src: url('https://fonts.googleapis.com/css2?family=Poppins') format('woff2');
+}
+
+/* @font-face {
+  font-family: 'Poppins';
+  font-weight: 900;
+  src: local('Lato'), url(./fonts/Lato-Bold.otf) format('opentype');
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-weight: 900;
+  src: local('Lato'), url(./fonts/Lato-Black.otf) format('opentype');
+} */
 
 /* .App-logo {
   height: 40vmin;

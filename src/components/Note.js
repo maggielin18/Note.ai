@@ -25,7 +25,7 @@ function Note() {
   const handleCreateNote = async () => {
     try {
       setSaving(true);
-      await axios.post('/api/notes', { title, content });
+      await axios.post('/', { title, content });
       console.log('Note created successfully');
     } catch (error) {
       console.error('Error creating note:', error);
