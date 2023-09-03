@@ -1,29 +1,22 @@
-.navBar {
+.toolBar {
   position: absolute;
   top: 50%; 
   transform: translateY(-50%); 
-  left: 0px;
+  right: 0px;
   width: 150px; /* Make this adjustable/dynamic using cursor */
   /* height: calc(100vh - 50px); */
   height: 100vh;
   display: flex;
   flex-direction: column;
   background-color: #eeeeee;
-  /* border-top-right-radius: 0.2cm;
-  border-bottom-right-radius: 0.2cm; */
+  /* border-top-left-radius: 0.2cm;
+  border-bottom-left-radius: 0.2cm; */
   font-size: 14px;
 }
 
-.navBarItems {
+.toolBarIcons {
   width: 25px;
   height: 25px;
   margin-left: 10px;
-  margin-top: 20px;
-  display: flex;
-  flex-direction: row;
-}
-
-.link {
-  text-decoration: none;
-  color: inherit;
+  margin-top: 10px;
 }

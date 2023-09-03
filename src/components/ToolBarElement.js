@@ -1,5 +1,4 @@
 import React from "react";
-import '../styles/NavBarStyle.css';
 
 export const ToolBarElement = [
   {
