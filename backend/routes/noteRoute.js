@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const Note = require('../models/noteSchema');  // Path to your Note model
 
+
 // Create a new note [Create]
 router.post('/', async (req, res) => {
   try {
@@ -60,7 +61,7 @@ router.delete('/:id', async (req, res) => {
   } catch (error) {
     res.status(400).json({ error: 'Failed to delete note' });
   }
-  
 });
 
 module.exports = router;
+
