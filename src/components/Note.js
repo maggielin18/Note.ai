@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef, useEffect, useCallback } from "react";
 import axios from "axios";
 
 import '../styles/NoteStyle.css'
@@ -10,29 +10,29 @@ function Note() {
   const contentRef = useRef(null);
   const [saving, setSaving] = useState(false);
 
-  useEffect(() => {
-    const autosaveTimer = setTimeout(() => {
-      handleCreateNote();
-    }, 2000); // Adjust the interval as needed
+  // const newNote = {
+  //   title: 'My New Note Title',
+  //   content: 'This is the content of my new note.'
+  // };
+  
+  // const axiosInstance = axios.create({
+  //   baseURL: "http://localhost:27017/database"  // Set the correct base URL for your backend
+  // });
 
-    return () => clearTimeout(autosaveTimer);
-  }, [title, content]);
+  axios.defaults.baseURL = "http://localhost:3005"
 
-  useEffect(() => {
-    titleRef.current.focus();
-  }, []);
-
-  const handleCreateNote = async () => {
+  const handleCreateNote = useCallback(async () => {
     try {
       setSaving(true);
-      await axios.post('/', { title, content });
-      console.log('Note created successfully');
+      await axios.post("/database", { title, content});
+      // await axiosInstance.post("/", { title, content});
+      console.log("Note created successfully");
     } catch (error) {
-      console.error('Error creating note:', error);
+      console.error("Error creating note:", error);
     } finally {
       setSaving(false);
     }
-  };
+  }, [title, content]);
 
   const handleKeyDown = (e) => {
     if (e.key === "ArrowDown" && titleRef.current.selectionStart === titleRef.current.value.length) {
@@ -49,6 +49,18 @@ function Note() {
   } else if (title && content) {
     savingStatusText = "Saved";
   }
+
+  useEffect(() => {
+    const autosaveTimer = setTimeout(() => {
+      handleCreateNote();
+    }, 2000); // Adjust the interval as needed
+
+    return () => clearTimeout(autosaveTimer);
+  }, [title, content, handleCreateNote]);
+
+  useEffect(() => {
+    titleRef.current.focus();
+  }, []);
 
   return (
     <div className="note">
@@ -70,6 +82,9 @@ function Note() {
       />
       <div>
         {savingStatusText}
+      </div>
+      <div>
+        <button onClick={handleCreateNote}>Save Note</button>
       </div>
     </div>
   );

@@ -33,30 +33,6 @@ class NavBar extends Component{
         {/* <button onClick={() => this.handleCreateNote("New Note Title", "New Note Content")}>Create Note</button> */}
       </div>
     )
-    // return(
-    //     <nav className="navBar">
-    //         <ul>
-    //         {NavBarElement.map((key, index) => {
-    //             return (
-    //                 <li
-    //                     key = {key}
-    //                     className = 'navBar'
-    //                     onClick = {() => {
-    //                         window.location.pathname = key.link;
-    //                     }}
-    //                 >
-    //                     <div id = 'icon'>
-    //                         {key.icon}
-    //                     </div>
-    //                     <div id = 'title'>
-    //                         {key.title}
-    //                     </div>
-    //                 </li>
-    //             );
-    //         })}
-    //         </ul>
-    //     </nav>
-    // )
   }
 }
 
