@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const Note = require('../models/noteSchema');  // Path to your Note model
 
+
 // Create a new note [Create]
 router.post('/database', async (req, res) => {
   try {
@@ -60,37 +61,7 @@ router.delete('/:id', async (req, res) => {
   } catch (error) {
     res.status(400).json({ error: 'Failed to delete note' });
   }
-  
 });
 
 module.exports = router;
 
-// import { Router } from "express";
-// import {
-//   renderNoteForm,
-//   createNewNote,
-//   renderNotes,
-//   renderEditForm,
-//   updateNote,
-//   deleteNote,
-// } from "../../controllers/NoteController.js";
-
-// const router = Router();
-
-// // New Note
-// router.get("/notes/add", renderNoteForm);
-
-// router.post("/notes/new-note", createNewNote);
-
-// // Get All Notes
-// router.get("/notes", renderNotes);
-
-// // Edit Notes
-// router.get("/notes/edit/:id", renderEditForm);
-
-// router.put("/notes/edit-note/:id", updateNote);
-
-// // Delete Notes
-// router.delete("/notes/delete/:id", deleteNote);
-
-// export default router;
