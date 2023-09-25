@@ -4,7 +4,7 @@ const Note = require('../models/noteSchema');  // Path to your Note model
 
 
 // Create a new note [Create]
-router.post('/', async (req, res) => {
+router.post('/database', async (req, res) => {
   try {
     const note = new Note(req.body);
     await note.save();
@@ -15,7 +15,7 @@ router.post('/', async (req, res) => {
 });
 
 // Read all notes [Read all]
-router.get('/', async (req, res) => {
+router.get('/database', async (req, res) => {
   try {
     const notes = await Note.find();
     res.status(200).json(notes);

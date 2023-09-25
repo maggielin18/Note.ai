@@ -5,7 +5,7 @@ const folderSchema = new mongoose.Schema({
   title: String,
   content: String,
   createdAt: { type: Date, default: Date.now },
-  updatedAt: Date,
+  updatedAt: { type: Date, default: Date.now },
 });
 
 const Folder = mongoose.model('Folder', folderSchema);
