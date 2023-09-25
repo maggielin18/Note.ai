@@ -3,7 +3,7 @@ const router = express.Router();
 const Note = require('../models/noteSchema');  // Path to your Note model
 
 // Create a new note [Create]
-router.post('/', async (req, res) => {
+router.post('/database', async (req, res) => {
   try {
     const note = new Note(req.body);
     await note.save();
@@ -14,7 +14,7 @@ router.post('/', async (req, res) => {
 });
 
 // Read all notes [Read all]
-router.get('/', async (req, res) => {
+router.get('/database', async (req, res) => {
   try {
     const notes = await Note.find();
     res.status(200).json(notes);
@@ -64,3 +64,33 @@ router.delete('/:id', async (req, res) => {
 });
 
 module.exports = router;
+
+// import { Router } from "express";
+// import {
+//   renderNoteForm,
+//   createNewNote,
+//   renderNotes,
+//   renderEditForm,
+//   updateNote,
+//   deleteNote,
+// } from "../../controllers/NoteController.js";
+
+// const router = Router();
+
+// // New Note
+// router.get("/notes/add", renderNoteForm);
+
+// router.post("/notes/new-note", createNewNote);
+
+// // Get All Notes
+// router.get("/notes", renderNotes);
+
+// // Edit Notes
+// router.get("/notes/edit/:id", renderEditForm);
+
+// router.put("/notes/edit-note/:id", updateNote);
+
+// // Delete Notes
+// router.delete("/notes/delete/:id", deleteNote);
+
+// export default router;
